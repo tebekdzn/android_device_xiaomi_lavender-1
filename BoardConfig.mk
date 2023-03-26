@@ -54,3 +54,5 @@ VENDOR_SECURITY_PATCH := 2021-06-01
 
 # Inherit the proprietary files
 include vendor/xiaomi/lavender/BoardConfigVendor.mk
+
+BUILD_BROKEN_DUP_RULES := true
