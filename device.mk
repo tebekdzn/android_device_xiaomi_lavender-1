@@ -44,6 +44,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamera_sdm660_shim
 
+#DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4.vendor \
+    android.hardware.drm@1.3.vendor \
+    android.hardware.drm@1.2.vendor \
+    android.hardware.drm@1.1.vendor \
+    android.hardware.drm@1.0.vendor
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
