@@ -24,6 +24,11 @@ BOARD_HAVE_IR := true
 # FM
 BOARD_HAVE_QCOM_FM := true
 
+# Vndk
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite-v29.so \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-v29.so
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
@@ -51,9 +56,14 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.2.vendor \
     android.hardware.drm@1.1.vendor \
     android.hardware.drm@1.0.vendor
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
 
 # Vibrator
 PRODUCT_PACKAGES += \
