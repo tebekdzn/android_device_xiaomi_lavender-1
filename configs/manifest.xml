@@ -16,4 +16,9 @@
         <fqname>@2.0::IFingerprintNavigation/default</fqname>
         <fqname>@2.0::IFingerprintSensorTest/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.qti.ims.factory</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IImsFactory/default</fqname>
+    </hal>
 </manifest>
